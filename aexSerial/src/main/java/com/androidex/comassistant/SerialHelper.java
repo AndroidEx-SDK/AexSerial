@@ -5,11 +5,6 @@ package com.androidex.comassistant;
  */
 
 import android.content.Context;
-import android.content.Intent;
-import android.util.Log;
-import android.util.Xml;
-import android.widget.Toast;
-
 import com.androidex.bean.*;
 import com.androidex.plugins.kkserial;
 
@@ -18,8 +13,8 @@ import com.androidex.plugins.kkserial;
  *         串口辅助工具类
  */
 public abstract class SerialHelper {
-    private String sPort = "/dev/ttymxc2";
-    private int iBaudRate = 115200;
+    private String sPort = "/dev/ttyS2";
+    private int iBaudRate = 9600;
     private byte[] _bLoopData = new byte[]{0x30};
     private int iDelay = 500;
     private Context context;
@@ -36,11 +31,11 @@ public abstract class SerialHelper {
 
 
     public SerialHelper(Context context) {
-        this("/dev/ttymxc2", 115200, context);
+        this("/dev/ttyS2", 9600, context);
     }
 
     public SerialHelper(String sPort, Context context) {
-        this(sPort, 115200, context);
+        this(sPort, 9600, context);
     }
 
     public SerialHelper(String sPort, String sBaudRate, Context context) {
