@@ -9,7 +9,7 @@
         constructor必传参数：sPort --- 串口地址
                              iBaudRate --- 波特率
                              context ---  上下文环境
-###### 主要提供操作有：
+> ###### 主要提供操作有：
 
         1.打开串口  --- open()
         2.关闭串口 ---  close()
